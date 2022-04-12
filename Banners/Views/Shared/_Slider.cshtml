@@ -1,0 +1,15 @@
+﻿@using Banners.Shared.Configurations
+@model List<Banners.Models.ViewModels.ShowBannerViewModel>
+
+<div class="splide">
+
+    <div class="splide__track">
+		<ul class="splide__list">
+				@foreach(var banner in Model){
+					<li class="splide__slide" slideid="@banner.Id" slidehref="@banner.LinkURL">
+						<img src="@Uploads.BannerImagesUrl/@banner.ImageURL" />
+					</li>
+				}
+		</ul>
+  </div>
+</div>

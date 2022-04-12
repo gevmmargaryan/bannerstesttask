@@ -1,0 +1,11 @@
+﻿@model List<Banners.Models.ViewModels.ShowBannerViewModel>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    @{
+        await Html.RenderPartialAsync("_Slider", Model); 
+    }
+</div>

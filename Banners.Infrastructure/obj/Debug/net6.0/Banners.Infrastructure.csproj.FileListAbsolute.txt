@@ -1,0 +1,12 @@
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\bin\Debug\net6.0\Banners.Infrastructure.deps.json
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\bin\Debug\net6.0\Banners.Infrastructure.dll
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\bin\Debug\net6.0\Banners.Infrastructure.pdb
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.csproj.AssemblyReference.cache
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.AssemblyInfoInputs.cache
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.AssemblyInfo.cs
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.csproj.CoreCompileInputs.cache
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.dll
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\refint\Banners.Infrastructure.dll
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\Banners.Infrastructure.pdb
+C:\Users\zevs\source\repos\Banners\Banners.Infrastructure\obj\Debug\net6.0\ref\Banners.Infrastructure.dll

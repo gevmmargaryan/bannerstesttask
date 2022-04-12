@@ -1,0 +1,70 @@
+﻿@using Banners.Shared.Configurations
+
+@model IEnumerable<Banners.Models.ViewModels.ShowBannerViewModel>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<div class="row">
+    <div class="col-10"><h4>Banners</h4></div>
+    <div class="col-2 text-right"><a asp-action="Create">Create New Baner</a></div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ImageURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.LinkURL)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Online)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AutoRotate)
+            </th>
+            <th>
+                Actions
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    <img src="@Uploads.BannerImagesUrl/@item.ImageURL"
+                        height="200" width="200" class="img-thumbnail"/>
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.LinkURL)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Online)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Order)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.AutoRotate)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                    <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "kwu8Kib8njjzy5VXJAqL+Z226+dd9tuMWufHKPMIh6m4ixWaqZnirCddKX9vd88U8UQVHQvfsC57wN0m9y2QVg==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners.Model\\Banners.Model.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\zevs\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.http.features\\5.0.15\\microsoft.aspnetcore.http.features.5.0.15.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\microsoft.extensions.primitives\\5.0.1\\microsoft.extensions.primitives.5.0.1.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\system.io.pipelines\\5.0.2\\system.io.pipelines.5.0.2.nupkg.sha512"
+  ],
+  "logs": []
+}

@@ -1,0 +1,32 @@
+﻿@model IEnumerable<Banners.Models.ViewModels.ShowBannerStatViewModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.DateTimeOccurred)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Banner)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Event)
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.DateTimeOccurred)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Banner.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Event)
+            </td>
+        </tr>
+}
+    </tbody>
+</table>

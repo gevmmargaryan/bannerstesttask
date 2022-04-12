@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Banners</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AdminLTE 3 | Tabbed IFrames</title>
+
+    <!-- Google Font: Source Sans Pro -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&amp;display=fallback">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/admin/plugins/fontawesome-free/css/all.min.css">
+
+    <link rel="stylesheet" href="~/admin/dist/css/adminlte.css" asp-append-version="true" />
+    <!-- overlayScrollbars -->
+    <link rel="stylesheet" href="~/admin/plugins/overlayScrollbars/css/OverlayScrollbars.min.css">
+
+    <link rel="stylesheet" href="~/Banners.styles.css" asp-append-version="true" />
+</head>
+<body class="sidebar-mini layout-fixed dark-mode" data-panel-auto-height-mode="height" style="height: auto;">
+
+    @{
+        await Html.RenderPartialAsync("_Aside");
+    }
+
+    <div class="content-wrapper" data-auto-dark-mode="true" data-loading-screen="750" style="height: 100%;">
+        <div class="tab-content container">
+            <div class="tab-empty" style="height: 634px; display: none;">
+                <h2 class="display-4">No tab selected!</h2>
+            </div>
+            <div class="tab-loading" style="height: 634px; display: none;">
+                <div>
+                    <h2 class="display-4">Tab is loading <i class="fa fa-sync fa-spin"></i></h2>
+                </div>
+            </div>
+            <div class="tab-pane fade" id="panel-pages-mailbox-mailbox-html" role="tabpanel" aria-labelledby="tab-pages-mailbox-mailbox-html">
+            </div>
+
+            <div class="tab-pane fade active show"
+                 id="panel-pages-search-simple-html" role="tabpanel" aria-labelledby="tab-pages-search-simple-html">
+                @RenderBody()
+
+            </div>
+        </div>
+    </div>
+
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

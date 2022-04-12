@@ -1,0 +1,17 @@
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.DAL.deps.json
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.DAL.runtimeconfig.json
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.DAL.dll
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.DAL.pdb
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.csproj.AssemblyReference.cache
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.AssemblyInfoInputs.cache
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.AssemblyInfo.cs
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.csproj.CoreCompileInputs.cache
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.dll
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\refint\Banners.DAL.dll
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.pdb
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.genruntimeconfig.cache
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\ref\Banners.DAL.dll
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.Infrastructure.dll
+C:\Users\zevs\source\repos\Banners\Banners.DAL\bin\Debug\net6.0\Banners.Infrastructure.pdb
+C:\Users\zevs\source\repos\Banners\Banners.DAL\obj\Debug\net6.0\Banners.DAL.csproj.CopyComplete

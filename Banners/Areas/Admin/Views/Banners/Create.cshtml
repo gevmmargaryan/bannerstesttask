@@ -1,0 +1,64 @@
+﻿@model Banners.Models.ViewModels.InsertBannerViewModel
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<div class="row">
+    <div class="col-10"><h4>Create Banner</h4></div>
+    <div class="col-2 text-right"><a asp-action="Index">Back to List</a></div>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create" enctype="multipart/form-data">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Title" class="control-label"></label>
+                <input asp-for="Title" class="form-control" />
+                <span asp-validation-for="Title" class="text-danger"></span>
+            </div>
+
+            <div class="form-group">
+                <label for="exampleInputFile">File input</label>
+                <div class="input-group">
+                    <div class="custom-file">
+                        <input type="file" asp-for="FormFile" class="custom-file-input" id="image" required>
+                        <label asp-for="FormFile" class="custom-file-label" for="image">Choose file</label>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label asp-for="LinkURL" class="control-label"></label>
+                <input asp-for="LinkURL" class="form-control" />
+                <span asp-validation-for="LinkURL" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="Online" /> @Html.DisplayNameFor(model => model.Online)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="Order" class="control-label"></label>
+                <input asp-for="Order" class="form-control" required/>
+                <span asp-validation-for="Order" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="AutoRotate"/> @Html.DisplayNameFor(model => model.AutoRotate)
+                </label>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts {
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
+}
