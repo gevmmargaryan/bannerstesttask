@@ -280,3 +280,7 @@ C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Banners.Model.pdb
 C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Banners.Service.pdb
 C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Banners.Shared.dll
 C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Banners.Shared.pdb
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Microsoft.AspNetCore.Identity.UI.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\Microsoft.Extensions.FileProviders.Embedded.dll
+C:\Users\zevs\source\repos\Banners\Banners\obj\Debug\net6.0\Banners.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\BCrypt.Net-Next.dll

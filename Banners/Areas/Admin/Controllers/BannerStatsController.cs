@@ -12,9 +12,11 @@ using Banners.Models.ViewModels;
 using Banners.Service.Services.Implementations;
 using Banners.Service.Services.Interfaces;
 using Banners.Infrastructure.Structures;
+using Microsoft.AspNetCore.Authorization;
 
 namespace Banners.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class BannerStatsController : Controller
     {

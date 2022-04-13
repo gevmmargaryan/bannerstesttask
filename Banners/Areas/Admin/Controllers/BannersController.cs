@@ -16,6 +16,7 @@ using Microsoft.AspNetCore.Authorization;
 
 namespace Banners.Areas.Admin.Controllers
 {
+    [Authorize]
     [Area("Admin")]
     public class BannersController : Controller
     {

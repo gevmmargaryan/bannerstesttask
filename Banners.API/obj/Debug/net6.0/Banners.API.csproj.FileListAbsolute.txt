@@ -75,3 +75,4 @@ C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.genr
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\ref\Banners.API.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.pdb
+C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\BCrypt.Net-Next.dll

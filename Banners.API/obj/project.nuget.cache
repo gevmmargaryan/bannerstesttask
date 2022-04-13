@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "jqN+AlMJsMKv3U42spjwac99vieVp3kFLPatWy9J+kv8sHXW75gbfSpSB0H02hcMFuB7O2YJQuz/W1VpRoSl9Q==",
+  "dgSpecHash": "6vBw7nTaexi6+do3kRPJ3H6FZFLZVOHOJSaNldwZzzx2AROvMugdCSq/7IxMa/COXCF3F4n3zCKgVnDjN+P3sg==",
   "success": true,
   "projectFilePath": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners.API\\Banners.API.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zevs\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.3\\microsoft.aspnetcore.cryptography.internal.6.0.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.3\\microsoft.aspnetcore.cryptography.keyderivation.6.0.3.nupkg.sha512",

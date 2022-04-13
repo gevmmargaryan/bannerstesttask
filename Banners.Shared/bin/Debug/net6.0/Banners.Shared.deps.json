@@ -27,6 +27,14 @@
           }
         }
       },
+      "BCrypt.Net-Next/4.0.3": {
+        "runtime": {
+          "lib/net6.0/BCrypt.Net-Next.dll": {
+            "assemblyVersion": "4.0.3.0",
+            "fileVersion": "4.0.3.0"
+          }
+        }
+      },
       "Bogus/34.0.2": {
         "runtime": {
           "lib/net6.0/Bogus.dll": {
@@ -641,6 +649,7 @@
       },
       "Banners.DAL/1.0.0": {
         "dependencies": {
+          "BCrypt.Net-Next": "4.0.3",
           "Banners.Infrastructure": "1.0.0",
           "Bogus": "34.0.2",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.3",
@@ -684,6 +693,13 @@
       "sha512": "sha512-WIadGC1pIwbnyTubvI577p3F++Bsj9q2Q3OaAc1I0QS+JhupN1xkdrPBhI9bPIeg63zM81tZplUNYkqU1HE5jQ==",
       "path": "automapper/11.0.1",
       "hashPath": "automapper.11.0.1.nupkg.sha512"
+    },
+    "BCrypt.Net-Next/4.0.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-W+U9WvmZQgi5cX6FS5GDtDoPzUCV4LkBLkywq/kRZhuDwcbavOzcDAr3LXJFqHUi952Yj3LEYoWW0jbEUQChsA==",
+      "path": "bcrypt.net-next/4.0.3",
+      "hashPath": "bcrypt.net-next.4.0.3.nupkg.sha512"
     },
     "Bogus/34.0.2": {
       "type": "package",

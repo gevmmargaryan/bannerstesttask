@@ -8,6 +8,6 @@ namespace Banners.Shared.Configurations
 {
     public class Uploads
     {
-        public static string BannerImagesUrl = "/uploads/images";
+        public static string BannerImagesUrl = "uploads/images";
     }
 }

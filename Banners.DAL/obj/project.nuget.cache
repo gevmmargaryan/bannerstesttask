@@ -1,10 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "5mSrk6UR93qihhX4e5/WeAtcxp5snv7EE4kBKmPp0YQ2aqBCy6RIYYq3iT6SuTPeIIv3aXvyPQZfYnAor3+e1w==",
+  "dgSpecHash": "qgOjQFBlDpy8PQlgKvu7KBAyG82Xw4bVG9LB2ZYUxab55oNJVU/K7f5Q54jNOhzhPIllOnAD05r9Rt2aNHylUg==",
   "success": true,
   "projectFilePath": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners.DAL\\Banners.DAL.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zevs\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.3\\microsoft.aspnetcore.cryptography.internal.6.0.3.nupkg.sha512",
