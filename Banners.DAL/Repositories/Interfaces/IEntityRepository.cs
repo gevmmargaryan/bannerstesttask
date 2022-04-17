@@ -9,12 +9,12 @@ namespace Banners.DAL.Repositories
 {
     public interface IEntityRepository<T> where T : class, IEntity
     {
-        Task<T> FindAsync(int id);
-        Task<IEnumerable<T>> GetPaginatedAsync(Pagination pagination);
-        Task<IEnumerable<T>> AllAsync();
+        IQueryable<T> Find(int id);
+        IQueryable<T> GetPaginated(Pagination pagination);
+        IQueryable<T> All();
         Task<T> InsertAsync(T entity);
         Task<T> UpdateAsync(T entity);
-        Task<T> DeleteAsync(int entity);
+        Task<T> DeleteAsync(int id);
         
     }
 }

@@ -7,6 +7,7 @@ using Banners.Service.Services.Interfaces;
 using Banners.Shared.Configurations;
 using Banners.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
+using Microsoft.EntityFrameworkCore;
 
 namespace Banners.Service.Services.Implementations
 {
@@ -74,32 +75,38 @@ namespace Banners.Service.Services.Implementations
 
         public  async Task<List<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination)
         {
-            var banners = await _bannerRepository.GetPaginatedAsync(pagination);
-            banners = banners.OrderBy(b => b.Order);
+            var banners = await _bannerRepository
+                .GetPaginated(pagination)
+                .OrderBy(b => b.Order)
+                .ToListAsync();
             return _mapper.Map<List<ShowBannerViewModel>>(banners);
         }
 
         public async Task<List<ShowBannerViewModel>> AllAsync()
         {
-            var banners = await _bannerRepository.AllAsync();
+            var banners = await _bannerRepository.All()
+                .Where(b => b.Online == true)
+                .ToListAsync();
             return _mapper.Map<List<ShowBannerViewModel>>(banners);
         }
 
         public async Task<ShowBannerViewModel> FindAsync(int id)
         {
-            var banner = await _bannerRepository.FindAsync(id);
+            var banner = await _bannerRepository.Find(id).FirstOrDefaultAsync();
             return _mapper.Map<ShowBannerViewModel>(banner);
         }
 
         public async Task<UpdateBannerViewModel> EditAsync(int id)
         {
-            var banner = await _bannerRepository.FindAsync(id);
+            var banner = await _bannerRepository.Find(id).FirstOrDefaultAsync();
             return _mapper.Map<UpdateBannerViewModel>(banner);
         }
 
-        public Task<BannerViewModel> RemoveAsync(int id)
+        public async Task<BannerViewModel> DeleteAsync(int id)
         {
-            throw new NotImplementedException();
+            var banner = await _bannerRepository.DeleteAsync(id);           
+
+            return _mapper.Map<UpdateBannerViewModel>(banner);
         }
 
         public Task<BannerViewModel> AddAsync(BannerViewModel entity)

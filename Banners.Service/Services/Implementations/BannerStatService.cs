@@ -10,6 +10,7 @@ using Banners.DAL.Context;
 using AutoMapper;
 using Banners.Models.ViewModels;
 using Banners.Infrastructure.Structures;
+using Microsoft.EntityFrameworkCore;
 
 namespace Banners.Service.Services.Implementations
 {
@@ -24,19 +25,51 @@ namespace Banners.Service.Services.Implementations
             _mapper = mapper;
         }
 
-        public async Task<ShowBannerStatViewModel> AddAsync(InsertBannerStatViewModel bannerStatViewModel)
+        public async Task<ShowBannerStatViewModel> AddOrUpdateAsync(InsertBannerStatViewModel bannerStatViewModel)
         {
-            BannerStat bannerStat = _mapper.Map<BannerStat>(bannerStatViewModel);
-            bannerStat.DateTimeOccurred = DateTime.Now;
-            bannerStat = await _bannerStatRepository.InsertAsync(bannerStat);
+            BannerStat? bannerStat = null;
+
+            var date = DateTime.Now;
+            var hour = date.Hour + 1;
+
+            bannerStat = await _bannerStatRepository.All()
+               .Where(bs => bs.BannerId == bannerStatViewModel.BannerId)
+               .Where(bs => bs.Date == date)
+               .Where(bs => bs.Hour == hour)
+               .FirstOrDefaultAsync();
+
+            if (bannerStat == null)
+            {
+                bannerStat = new BannerStat();
+                bannerStat.BannerId = bannerStatViewModel.BannerId;
+                bannerStat.Date = date;
+                bannerStat.Hour = hour;
+                bannerStat.IsDeleted = false;
+                bannerStat.Impressions = 0;
+                bannerStat.Clicks = 0;
+            }
+
+            if (bannerStatViewModel.Event == Infrastructure.Enums.Event.Display)
+            {
+                bannerStat.Impressions += 1;
+            }
+            else if (bannerStatViewModel.Event == Infrastructure.Enums.Event.Click)
+            {
+                bannerStat.Clicks += 1;
+            }
+
+            bannerStat = await _bannerStatRepository.UpdateAsync(bannerStat);
+
 
             return _mapper.Map<ShowBannerStatViewModel>(bannerStat);
         }
 
         public async Task<List<ShowBannerStatViewModel>> GetPaginatedAsync(Pagination pagination)
         {
-            var bannerStats = await _bannerStatRepository.GetPaginatedAsync(pagination);
+            var bannerStats = await _bannerStatRepository.GetPaginated(pagination).ToListAsync();
             return _mapper.Map<List<ShowBannerStatViewModel>>(bannerStats);
         }
+
+
     }
 }

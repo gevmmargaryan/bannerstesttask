@@ -65,7 +65,7 @@ namespace Banners.Areas.Admin.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Create([Bind("Title,Image,LinkURL,Online,Order,AutoRotate,FormFile")] InsertBannerViewModel bannerViewModel)
+        public async Task<IActionResult> Create([Bind("Title,Image,LinkURL,Online,Order,FormFile")] InsertBannerViewModel bannerViewModel)
         {
             if (ModelState.IsValid)
             {
@@ -124,21 +124,19 @@ namespace Banners.Areas.Admin.Controllers
         // GET: Admin/Banners/Delete/5
         public async Task<IActionResult> Delete(int? id)
         {
-            /*if (id == null)
+            if (id == null)
             {
                 return NotFound();
             }
 
-            var banner = await _context.Banner
-                .FirstOrDefaultAsync(m => m.Id == id);
+            var banner = await _bannerService.FindAsync((int)id);
+
             if (banner == null)
             {
                 return NotFound();
             }
 
-            return View(banner);*/
-
-            return View();
+            return View(banner);
         }
 
         // POST: Admin/Banners/Delete/5
@@ -146,11 +144,8 @@ namespace Banners.Areas.Admin.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> DeleteConfirmed(int id)
         {
-            /*var banner = await _context.Banner.FindAsync(id);
-            _context.Banner.Remove(banner);
-            await _context.SaveChangesAsync();
-            return RedirectToAction(nameof(Index));*/
-            return View();
+            await _bannerService.DeleteAsync(id);
+            return RedirectToAction(nameof(Index));
         }
 
         private bool BannerExists(int id)

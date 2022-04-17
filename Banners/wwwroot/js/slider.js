@@ -3,15 +3,17 @@ var events = {
     Display: 0,
     Click: 1
 };
+var interval = 100000;
 
-var splide = new Splide('.splide', { autoplay: true }).mount();
-var Autoplay = splide.Components.Autoplay;
-var play = splide.root.querySelector('.splide__play');
-var pause = splide.root.querySelector('.splide__pause');
+var splide = new Splide('.splide',
+    {
+        autoplay: true,
+        type: 'loop',
+        interval: interval
+    }
+);
 
-Autoplay.play();
-
-splide.on('active', function (activeSlide) {
+splide.on('visible', function (activeSlide) {
     let slideid = activeSlide.slide.getAttribute("slideid");
 
     var data = {
@@ -24,13 +26,17 @@ splide.on('active', function (activeSlide) {
         type: 'post',
         contentType: "application/json",
         data: JSON.stringify(data),
-        success: function (result) { 
+        success: function (result) {
         }
 
     });
 });
 
 splide.on('click', function (activeSlide) {
+
+    const url = activeSlide.slide.getAttribute("slidehref");
+    window.open(url, '_blank').focus();
+
     let slideid = activeSlide.slide.getAttribute("slideid");
 
     var data = {
@@ -44,8 +50,8 @@ splide.on('click', function (activeSlide) {
         contentType: "application/json",
         data: JSON.stringify(data),
         success: function (result) {
-            var slidehref = activeSlide.slide.getAttribute("slidehref")
-            window.location.href = slidehref;
         }
     });
 });
+
+splide.mount();

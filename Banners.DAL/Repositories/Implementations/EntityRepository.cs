@@ -6,6 +6,7 @@ using Banners.DAL.Context;
 using Banners.DAL.Entities.Interfaces;
 using Banners.Infrastructure.Structures;
 using Microsoft.EntityFrameworkCore;
+using Banners.DAL.Entities;
 
 namespace Banners.DAL.Repositories.Implementations
 {
@@ -20,20 +21,20 @@ namespace Banners.DAL.Repositories.Implementations
             _context = context;
             Entities = context.Set<T>();
         }
-        public async Task<IEnumerable<T>> AllAsync()
+        public IQueryable<T> All()
         {
-            return await Entities.Where(e => !e.IsDeleted).ToListAsync();
-        }
-        public async Task<IEnumerable<T>> GetPaginatedAsync(Pagination pagination)
-        {
-            return await Entities.Skip((pagination.Page - 1) * pagination.Count)
-                .Take(pagination.Count)
-                .ToListAsync();
+            return Entities.Where(e => !e.IsDeleted);
         }
 
-        public async Task<T> FindAsync(int id)
+        public IQueryable<T> GetPaginated(Pagination pagination)
         {
-            return await Entities.FirstOrDefaultAsync(s => s.Id == id && !s.IsDeleted);
+            return Entities.Skip((pagination.Page - 1) * pagination.Count)
+                .Take(pagination.Count);
+        }
+
+        public IQueryable<T> Find(int id)
+        {
+            return Entities.Where(s => s.Id == id && !s.IsDeleted);
         }
         public async Task<T> InsertAsync(T entity)
         {
@@ -56,9 +57,9 @@ namespace Banners.DAL.Repositories.Implementations
             await _context.SaveChangesAsync();
             return entity;
         }
-        public async Task<T> DeleteAsync(int entityId)
+        public async Task<T> DeleteAsync(int id)
         {
-            var result = await FindAsync(entityId);
+            var result = Find(id).FirstOrDefault();
             if (result != null)
             {
                 result.IsDeleted = true;
@@ -67,6 +68,5 @@ namespace Banners.DAL.Repositories.Implementations
             }
             throw new Exception("Id is not valid");
         }
-
     }
 }

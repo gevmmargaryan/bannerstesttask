@@ -8,16 +8,16 @@ namespace Banners.DAL.Context
     {
         public ApplicationDbContext CreateDbContext(string[] args)
         {
-            /*IConfigurationRoot configuration = new ConfigurationBuilder()
+            IConfigurationRoot configuration = new ConfigurationBuilder()
                .SetBasePath(Directory.GetCurrentDirectory())
                .AddJsonFile("appsettings.json", optional: false, reloadOnChange: true)
-               .Build();*/
+               .Build();
 
             DbContextOptionsBuilder<ApplicationDbContext> optionsBuilder = new();
 
-            //string connectionString = configuration.GetConnectionString("DefaultConnection");
-            optionsBuilder.UseSqlServer("Data Source=(localdb)\\MSSQLLocalDB;Database=Banners;Integrated Security=True;Connect Timeout=30;Encrypt=False;TrustServerCertificate=False;ApplicationIntent=ReadWrite;MultiSubnetFailover=False");
-
+            string connectionString = configuration.GetConnectionString("DefaultConnection");
+            optionsBuilder.UseSqlServer(connectionString);
+            
             return new ApplicationDbContext(optionsBuilder.Options);
         }
 

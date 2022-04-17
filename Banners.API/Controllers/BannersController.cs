@@ -30,7 +30,7 @@ namespace Banners.API.Controllers
                 if (!ModelState.IsValid)
                     return BadRequest(ModelState);
 
-                var showBannerStatViewModel = await _bannerStatService.AddAsync(bannerStatViewModel);
+                var showBannerStatViewModel = await _bannerStatService.AddOrUpdateAsync(bannerStatViewModel);
                 return Ok(bannerStatViewModel);
             }
             catch(Exception e)

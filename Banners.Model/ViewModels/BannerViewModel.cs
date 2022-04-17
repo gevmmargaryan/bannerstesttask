@@ -45,8 +45,8 @@ namespace Banners.Models.ViewModels
         [Required]
         public int Order { get; set; }
 
-        [Required]
-        public bool AutoRotate { get; set; }
+        public bool IsDeleted { get; set; }
+        
 
         public List<BannerStatViewModel>? Statistics { get; set; }
     }

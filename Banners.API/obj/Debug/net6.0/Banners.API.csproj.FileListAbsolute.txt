@@ -6,6 +6,7 @@ C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.API.runt
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.API.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.API.pdb
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\AutoMapper.dll
+C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\BCrypt.Net-Next.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Bogus.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.Internal.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
@@ -53,7 +54,9 @@ C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.DAL.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Infrastructure.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Model.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Service.dll
+C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Service.pdb
+C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.pdb
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.DAL.pdb
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Infrastructure.pdb
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Model.pdb
@@ -62,7 +65,6 @@ C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.Gene
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.AssemblyInfoInputs.cache
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.AssemblyInfo.cs
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.csproj.CoreCompileInputs.cache
-C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.MvcApplicationPartsAssemblyInfo.cs
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\staticwebassets.development.json
@@ -73,6 +75,4 @@ C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\refint\Banners.A
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.pdb
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.genruntimeconfig.cache
 C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\ref\Banners.API.dll
-C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.dll
-C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\Banners.Shared.pdb
-C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.MvcApplicationPartsAssemblyInfo.cs

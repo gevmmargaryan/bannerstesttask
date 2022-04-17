@@ -27,10 +27,10 @@
                 @Html.DisplayNameFor(model => model.Online)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Order)
+                @Html.DisplayNameFor(model => model.IsDeleted)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.AutoRotate)
+                @Html.DisplayNameFor(model => model.Order)
             </th>
             <th>
                 Actions
@@ -55,10 +55,10 @@
                     @Html.DisplayFor(modelItem => item.Online)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.Order)
+                    @Html.DisplayFor(modelItem => item.IsDeleted)
                 </td>
                 <td>
-                    @Html.DisplayFor(modelItem => item.AutoRotate)
+                    @Html.DisplayFor(modelItem => item.Order)
                 </td>
                 <td>
                     <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

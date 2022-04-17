@@ -1,6 +1,7 @@
 ﻿using Banners.DAL.Entities.Interfaces;
 using Banners.DAL.Repositories;
 using Banners.Infrastructure.Structures;
+using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -18,17 +19,17 @@ namespace Banners.Service.Services
 
         public async Task<T> FindAsync(int entityId)
         {
-            return await _entityRepository.FindAsync(entityId);
+            return await _entityRepository.Find(entityId).FirstOrDefaultAsync();
         }
 
         public async Task<IEnumerable<T>> AllAsync()
         {
-            return await _entityRepository.AllAsync();
+            return await _entityRepository.All().ToListAsync();
         }
 
         public async Task<IEnumerable<T>> GetPaginatedAsync(Pagination pagination)
         {
-            return await _entityRepository.GetPaginatedAsync(pagination);
+            return await _entityRepository.GetPaginated(pagination).ToListAsync();
         }
         
 

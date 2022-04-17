@@ -7,7 +7,6 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
-
 namespace Banners.DAL.Context
 {
     public class ApplicationDbContext : IdentityDbContext<User>
@@ -24,6 +23,10 @@ namespace Banners.DAL.Context
         protected override void OnModelCreating(ModelBuilder builder)
         {
             base.OnModelCreating(builder);
+
+            builder.Entity<BannerStat>()
+                .HasIndex(b => new {b.BannerId, b.Date, b.Hour})
+                .IsUnique();
 
             //Seeding a  'Administrator' role to AspNetRoles table
             builder.Entity<IdentityRole>().HasData(new IdentityRole 

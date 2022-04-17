@@ -10,6 +10,6 @@ namespace Banners.Service.Services.Interfaces
     public interface IBannerStatService
     {
         Task<List<ShowBannerStatViewModel>> GetPaginatedAsync(Pagination pagination);
-        Task<ShowBannerStatViewModel> AddAsync(InsertBannerStatViewModel entity);
+        Task<ShowBannerStatViewModel> AddOrUpdateAsync(InsertBannerStatViewModel bannerStatViewModel);
     }
 }

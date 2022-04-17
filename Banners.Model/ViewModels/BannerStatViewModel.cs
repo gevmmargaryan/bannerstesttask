@@ -12,13 +12,13 @@ namespace Banners.Models.ViewModels
     {
         [DisplayName("Banner")]
         public BannerViewModel Banner { get; set; }
-        public DateTime DateTimeOccurred { get; set; }
     }
 
     public class BannerStatViewModel
     {
         public int BannerId { get; set; }
+        public DateTime Date { get; set; }
+        public int Hour { get; set; }
         public Event Event { get; set; }
-
     }
 }

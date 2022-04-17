@@ -19,9 +19,6 @@ namespace Banners.DAL.Entities
         [Required]
         public int Order { get; set; }
 
-        [Required]
-        public bool AutoRotate { get; set; }
-
         public List<BannerStat>? Statistics { get; set; }
     }
 }

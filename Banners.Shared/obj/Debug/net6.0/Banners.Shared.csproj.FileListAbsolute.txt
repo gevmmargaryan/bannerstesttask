@@ -5,8 +5,8 @@ C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.DAL.d
 C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.Infrastructure.dll
 C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.Model.dll
 C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.DAL.pdb
-C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.Infrastructure.pdb
 C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.Model.pdb
+C:\Users\zevs\source\repos\Banners\Banners.Shared\bin\Debug\net6.0\Banners.Infrastructure.pdb
 C:\Users\zevs\source\repos\Banners\Banners.Shared\obj\Debug\net6.0\Banners.Shared.csproj.AssemblyReference.cache
 C:\Users\zevs\source\repos\Banners\Banners.Shared\obj\Debug\net6.0\Banners.Shared.GeneratedMSBuildEditorConfig.editorconfig
 C:\Users\zevs\source\repos\Banners\Banners.Shared\obj\Debug\net6.0\Banners.Shared.AssemblyInfoInputs.cache

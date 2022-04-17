@@ -28,7 +28,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banners.Infrastructure", "B
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banners.API", "Banners.API\Banners.API.csproj", "{5A3CFD54-73DC-4645-A23F-87D8A62BAE6D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Banners.Shared", "Banners.Shared\Banners.Shared.csproj", "{57FD3EAC-0954-4C38-A10D-98B174A82BBD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Banners.Shared", "Banners.Shared\Banners.Shared.csproj", "{57FD3EAC-0954-4C38-A10D-98B174A82BBD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

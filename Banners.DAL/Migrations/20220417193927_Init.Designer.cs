@@ -12,14 +12,14 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Banners.DAL.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220413125214_Init")]
+    [Migration("20220417193927_Init")]
     partial class Init
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.3")
+                .HasAnnotation("ProductVersion", "6.0.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
@@ -31,9 +31,6 @@ namespace Banners.DAL.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
-                    b.Property<bool>("AutoRotate")
-                        .HasColumnType("bit");
 
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
@@ -84,16 +81,22 @@ namespace Banners.DAL.Migrations
                     b.Property<int>("BannerId")
                         .HasColumnType("int");
 
+                    b.Property<int>("Clicks")
+                        .HasColumnType("int");
+
                     b.Property<int>("CreatedBy")
                         .HasColumnType("int");
 
                     b.Property<DateTime>("CreatedDt")
                         .HasColumnType("datetime2");
 
-                    b.Property<DateTime>("DateTimeOccurred")
-                        .HasColumnType("datetime2");
+                    b.Property<DateTime>("Date")
+                        .HasColumnType("Date");
 
-                    b.Property<int>("Event")
+                    b.Property<int>("Hour")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Impressions")
                         .HasColumnType("int");
 
                     b.Property<bool>("IsDeleted")
@@ -107,7 +110,8 @@ namespace Banners.DAL.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("BannerId");
+                    b.HasIndex("BannerId", "Date", "Hour")
+                        .IsUnique();
 
                     b.ToTable("BannerStat");
                 });
@@ -181,14 +185,14 @@ namespace Banners.DAL.Migrations
                         {
                             Id = "8e445865-a24d-4543-a6c6-9443d048cdb9",
                             AccessFailedCount = 0,
-                            ConcurrencyStamp = "91d9a2e5-de98-4a5f-85f1-1ffcec14e930",
+                            ConcurrencyStamp = "19ed2c66-80fe-42d9-9ad1-790fa2e65324",
                             Email = "admin@example.com",
-                            EmailConfirmed = false,
+                            EmailConfirmed = true,
                             LockoutEnabled = false,
                             NormalizedUserName = "admin",
                             PasswordHash = "AFekBrmsAFKTmZk37Ep80MoSsDLKLNLtEWu4PgtdgoLM4/U0rT1hnWwWzTQ4WnIk2Q==",
                             PhoneNumberConfirmed = false,
-                            SecurityStamp = "efda28ec-36b7-4f64-908a-5bf1211a978d",
+                            SecurityStamp = "9f03deca-5274-4903-b1b2-5e1cd252b58a",
                             TwoFactorEnabled = false,
                             UserName = "admin"
                         });
@@ -224,7 +228,7 @@ namespace Banners.DAL.Migrations
                         new
                         {
                             Id = "2c5e174e-3b0e-446f-86af-483d56fd7210",
-                            ConcurrencyStamp = "a6a62330-9295-432b-9604-92b3bfbe20d0",
+                            ConcurrencyStamp = "047e43f4-7c64-49ca-aaad-d40c08466e5e",
                             Name = "Administrator",
                             NormalizedName = "ADMINISTRATOR"
                         });

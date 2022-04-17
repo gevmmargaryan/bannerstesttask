@@ -11,7 +11,7 @@ namespace Banners.Service.Services.Interfaces
         Task<List<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination);
         Task<ShowBannerViewModel> FindAsync(int id);
         Task<UpdateBannerViewModel> EditAsync(int id);
-        Task<BannerViewModel> RemoveAsync(int id);
+        Task<BannerViewModel> DeleteAsync(int id);
         Task<BannerViewModel> AddAsync(BannerViewModel entity);
         Task<ShowBannerViewModel> UpdateAsync(UpdateBannerViewModel bannerViewModel, string webrootFolder);
     }

@@ -59,7 +59,6 @@ namespace Banners.DAL.Migrations
                     LinkURL = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Online = table.Column<bool>(type: "bit", nullable: false),
                     Order = table.Column<int>(type: "int", nullable: false),
-                    AutoRotate = table.Column<bool>(type: "bit", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedDt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -184,8 +183,10 @@ namespace Banners.DAL.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     BannerId = table.Column<int>(type: "int", nullable: false),
-                    DateTimeOccurred = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    Event = table.Column<int>(type: "int", nullable: false),
+                    Date = table.Column<DateTime>(type: "Date", nullable: false),
+                    Hour = table.Column<int>(type: "int", nullable: false),
+                    Impressions = table.Column<int>(type: "int", nullable: false),
+                    Clicks = table.Column<int>(type: "int", nullable: false),
                     CreatedBy = table.Column<int>(type: "int", nullable: false),
                     UpdatedBy = table.Column<int>(type: "int", nullable: false),
                     CreatedDt = table.Column<DateTime>(type: "datetime2", nullable: false),
@@ -206,12 +207,12 @@ namespace Banners.DAL.Migrations
             migrationBuilder.InsertData(
                 table: "AspNetRoles",
                 columns: new[] { "Id", "ConcurrencyStamp", "Name", "NormalizedName" },
-                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "a6a62330-9295-432b-9604-92b3bfbe20d0", "Administrator", "ADMINISTRATOR" });
+                values: new object[] { "2c5e174e-3b0e-446f-86af-483d56fd7210", "047e43f4-7c64-49ca-aaad-d40c08466e5e", "Administrator", "ADMINISTRATOR" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUsers",
                 columns: new[] { "Id", "AccessFailedCount", "ConcurrencyStamp", "Email", "EmailConfirmed", "LockoutEnabled", "LockoutEnd", "NormalizedEmail", "NormalizedUserName", "PasswordHash", "PhoneNumber", "PhoneNumberConfirmed", "SecurityStamp", "TwoFactorEnabled", "UserName" },
-                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "91d9a2e5-de98-4a5f-85f1-1ffcec14e930", "admin@example.com", false, false, null, null, "admin", "AFekBrmsAFKTmZk37Ep80MoSsDLKLNLtEWu4PgtdgoLM4/U0rT1hnWwWzTQ4WnIk2Q==", null, false, "efda28ec-36b7-4f64-908a-5bf1211a978d", false, "admin" });
+                values: new object[] { "8e445865-a24d-4543-a6c6-9443d048cdb9", 0, "19ed2c66-80fe-42d9-9ad1-790fa2e65324", "admin@example.com", true, false, null, null, "admin", "AFekBrmsAFKTmZk37Ep80MoSsDLKLNLtEWu4PgtdgoLM4/U0rT1hnWwWzTQ4WnIk2Q==", null, false, "9f03deca-5274-4903-b1b2-5e1cd252b58a", false, "admin" });
 
             migrationBuilder.InsertData(
                 table: "AspNetUserRoles",
@@ -258,9 +259,10 @@ namespace Banners.DAL.Migrations
                 filter: "[NormalizedUserName] IS NOT NULL");
 
             migrationBuilder.CreateIndex(
-                name: "IX_BannerStat_BannerId",
+                name: "IX_BannerStat_BannerId_Date_Hour",
                 table: "BannerStat",
-                column: "BannerId");
+                columns: new[] { "BannerId", "Date", "Hour" },
+                unique: true);
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)

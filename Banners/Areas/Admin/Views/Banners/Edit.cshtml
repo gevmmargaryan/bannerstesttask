@@ -21,7 +21,7 @@
                 <span asp-validation-for="Title" class="text-danger"></span>
             </div>
             
-            <img src="/@Uploads.BannerImagesUrl/@Html.DisplayFor(modelItem => Model.ImageURL)}" height="200" width="200" class="img-thumbnail"/>
+            <img src="/@Uploads.BannerImagesUrl/@Html.DisplayFor(modelItem => Model.ImageURL)" height="200" width="200" class="img-thumbnail"/>
             <div class="form-group">
                 <label for="exampleInputFile">File input</label>
                 <div class="input-group">
@@ -46,11 +46,6 @@
                 <label asp-for="Order" class="control-label"></label>
                 <input asp-for="Order" class="form-control" />
                 <span asp-validation-for="Order" class="text-danger"></span>
-            </div>
-            <div class="form-group form-check">
-                <label class="form-check-label">
-                    <input class="form-check-input" asp-for="AutoRotate" /> @Html.DisplayNameFor(model => model.AutoRotate)
-                </label>
             </div>
             <input type="hidden" asp-for="Id" />
             <input type="hidden" asp-for="ImageURL" />
