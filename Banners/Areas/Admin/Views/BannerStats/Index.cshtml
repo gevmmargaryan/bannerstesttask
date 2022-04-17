@@ -4,16 +4,19 @@
     <thead>
         <tr>
             <th>
+                @Html.DisplayNameFor(model => model.Banner)
+            </th>
+            <th>
                 @Html.DisplayNameFor(model => model.Date)
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Hour)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Banner)
+                @Html.DisplayNameFor(model => model.Impressions)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.Event)
+                @Html.DisplayNameFor(model => model.Clicks)
             </th>
         </tr>
     </thead>
@@ -21,16 +24,19 @@
 @foreach (var item in Model) {
         <tr>
             <td>
+                @Html.DisplayFor(modelItem => item.Banner.Title)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Date)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Hour)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Banner.Title)
+                @Html.DisplayFor(modelItem => item.Impressions)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Event)
+                @Html.DisplayFor(modelItem => item.Clicks)
             </td>
         </tr>
 }

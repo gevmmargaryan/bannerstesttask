@@ -66,7 +66,10 @@ namespace Banners.Service.Services.Implementations
 
         public async Task<List<ShowBannerStatViewModel>> GetPaginatedAsync(Pagination pagination)
         {
-            var bannerStats = await _bannerStatRepository.GetPaginated(pagination).ToListAsync();
+            var bannerStats = await _bannerStatRepository
+                .GetPaginated(pagination)
+                .Include(bs => bs.Banner)
+                .ToListAsync();
             return _mapper.Map<List<ShowBannerStatViewModel>>(bannerStats);
         }
 

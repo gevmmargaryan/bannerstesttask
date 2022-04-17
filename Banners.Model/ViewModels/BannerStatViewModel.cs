@@ -19,6 +19,8 @@ namespace Banners.Models.ViewModels
         public int BannerId { get; set; }
         public DateTime Date { get; set; }
         public int Hour { get; set; }
+        public int Impressions { get; set; }
+        public int Clicks { get; set; }
         public Event Event { get; set; }
     }
 }

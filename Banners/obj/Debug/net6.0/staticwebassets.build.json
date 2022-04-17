@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "QpKEg6fxVid+YnBeEf2kWoCUd7TYg+zRdhlRSN/SeVg=",
+  "Hash": "Jg2H0SiZeVdMjbVvAwFy8bLgKWYFNIQvf2bZhGaBnBA=",
   "Source": "Banners",
   "BasePath": "_content/Banners",
   "Mode": "Default",
@@ -49179,6 +49179,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\a9887115-9d43-4b40-96fa-1b562ace19f4_08G-P4-5170-RX_LG_1.png"
+    },
+    {
+      "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\b7612140-5c82-48de-8ecd-1328dc0b26cf_54970356.webp",
+      "SourceId": "Banners",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\",
+      "BasePath": "_content/Banners",
+      "RelativePath": "uploads/images/b7612140-5c82-48de-8ecd-1328dc0b26cf_54970356.webp",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\b7612140-5c82-48de-8ecd-1328dc0b26cf_54970356.webp"
     }
   ]
 }
