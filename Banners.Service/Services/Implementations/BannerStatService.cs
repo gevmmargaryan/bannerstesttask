@@ -11,6 +11,7 @@ using AutoMapper;
 using Banners.Models.ViewModels;
 using Banners.Infrastructure.Structures;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace Banners.Service.Services.Implementations
 {
@@ -64,15 +65,22 @@ namespace Banners.Service.Services.Implementations
             return _mapper.Map<ShowBannerStatViewModel>(bannerStat);
         }
 
-        public async Task<List<ShowBannerStatViewModel>> GetPaginatedAsync(Pagination pagination)
+        public async Task<IPagedList<ShowBannerStatViewModel>> GetPaginatedAsync(Pagination pagination)
         {
+            var bannerStatsCount = _bannerStatRepository.All().Count();
+
             var bannerStats = await _bannerStatRepository
                 .GetPaginated(pagination)
                 .Include(bs => bs.Banner)
                 .ToListAsync();
-            return _mapper.Map<List<ShowBannerStatViewModel>>(bannerStats);
+
+            var showBannerStatViewModel = _mapper.Map<IList<ShowBannerStatViewModel>>(bannerStats);
+
+            var showBannerViewModelPaged =
+                new StaticPagedList<ShowBannerStatViewModel>(showBannerStatViewModel, pagination.Page,
+                pagination.Count, bannerStatsCount);
+
+            return showBannerViewModelPaged;
         }
-
-
     }
 }

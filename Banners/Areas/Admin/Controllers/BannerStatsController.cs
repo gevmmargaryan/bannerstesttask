@@ -31,7 +31,7 @@ namespace Banners.Areas.Admin.Controllers
 
 
         // GET: Admin/BannerStats
-        public async Task<IActionResult> Index(Pagination pagination)
+        public async Task<IActionResult> Index([FromQuery]Pagination pagination)
         {
             var banners = await _bannerStatService.GetPaginatedAsync(pagination);
             return View(banners);

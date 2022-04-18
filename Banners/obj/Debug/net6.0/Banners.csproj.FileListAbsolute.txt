@@ -284,3 +284,11 @@ C:\Users\zevs\source\repos\Banners\Banners\obj\Debug\net6.0\refint\Banners.dll
 C:\Users\zevs\source\repos\Banners\Banners\obj\Debug\net6.0\Banners.pdb
 C:\Users\zevs\source\repos\Banners\Banners\obj\Debug\net6.0\Banners.genruntimeconfig.cache
 C:\Users\zevs\source\repos\Banners\Banners\obj\Debug\net6.0\ref\Banners.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\cloudscribe.Pagination.Models.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\PagedList.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\PagedList.Mvc.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\PagedList.Core.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\PagedList.Core.Mvc.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\JetBrains.Annotations.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\X.PagedList.dll
+C:\Users\zevs\source\repos\Banners\Banners\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll

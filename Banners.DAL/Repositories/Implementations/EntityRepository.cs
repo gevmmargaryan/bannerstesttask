@@ -28,13 +28,14 @@ namespace Banners.DAL.Repositories.Implementations
 
         public IQueryable<T> GetPaginated(Pagination pagination)
         {
-            return Entities.Skip((pagination.Page - 1) * pagination.Count)
+            return Entities.Where(e => !e.IsDeleted)
+                .Skip((pagination.Page - 1) * pagination.Count)
                 .Take(pagination.Count);
         }
 
         public IQueryable<T> Find(int id)
         {
-            return Entities.Where(s => s.Id == id && !s.IsDeleted);
+            return Entities.Where(e => e.Id == id && !e.IsDeleted);
         }
         public async Task<T> InsertAsync(T entity)
         {

@@ -1,6 +1,7 @@
 ﻿using Banners.DAL.Entities;
 using Banners.Infrastructure.Structures;
 using Banners.Models.ViewModels;
+using X.PagedList;
 
 namespace Banners.Service.Services.Interfaces
 {
@@ -8,7 +9,7 @@ namespace Banners.Service.Services.Interfaces
     {
         Task<ShowBannerViewModel> CreateAsync(InsertBannerViewModel bannerViewModel, string webRootPath);
         Task<List<ShowBannerViewModel>> AllAsync();
-        Task<List<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination);
+        Task<IPagedList<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination);
         Task<ShowBannerViewModel> FindAsync(int id);
         Task<UpdateBannerViewModel> EditAsync(int id);
         Task<BannerViewModel> DeleteAsync(int id);

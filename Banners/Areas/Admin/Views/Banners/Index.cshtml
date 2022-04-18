@@ -1,6 +1,10 @@
 ﻿@using Banners.Shared.Configurations
+@using X.PagedList
+@model IPagedList<Banners.Models.ViewModels.ShowBannerViewModel>
 
-@model IEnumerable<Banners.Models.ViewModels.ShowBannerViewModel>
+@using X.PagedList;
+@using X.PagedList.Mvc.Core;
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers;
 
 @{
     ViewData["Title"] = "Index";
@@ -14,27 +18,13 @@
 <table class="table">
     <thead>
         <tr>
-            <th>
-                @Html.DisplayNameFor(model => model.Title)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.ImageURL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.LinkURL)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Online)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.IsDeleted)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Order)
-            </th>
-            <th>
-                Actions
-            </th>
+            <th>Title</th>
+            <th>ImageURL</th>
+            <th>LinkURL</th>
+            <th>Online</th>
+            <th>IsDeleted</th>
+            <th>Order</th>
+            <th>Actions</th>
         </tr>
     </thead>
     <tbody>
@@ -68,3 +58,10 @@
         }
     </tbody>
 </table>
+
+@Html.PagedListPager(Model, page => Url.Action("Index", "Banners", 
+    new { Page = page }),
+    new X.PagedList.Web.Common.PagedListRenderOptions {
+        LiElementClasses = new string[] { "page-item" },
+        PageClasses = new string[] { "page-link" }
+})

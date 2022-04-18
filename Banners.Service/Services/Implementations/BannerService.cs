@@ -8,6 +8,7 @@ using Banners.Shared.Configurations;
 using Banners.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
+using X.PagedList;
 
 namespace Banners.Service.Services.Implementations
 {
@@ -73,13 +74,22 @@ namespace Banners.Service.Services.Implementations
             return uniqueFileName;
         }
 
-        public  async Task<List<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination)
+        public  async Task<IPagedList<ShowBannerViewModel>> GetPaginatedAsync(Pagination pagination)
         {
+            var bannersCount = _bannerRepository.All().Count();
+
             var banners = await _bannerRepository
                 .GetPaginated(pagination)
                 .OrderBy(b => b.Order)
                 .ToListAsync();
-            return _mapper.Map<List<ShowBannerViewModel>>(banners);
+
+            var showBannerViewModel = _mapper.Map<IList<ShowBannerViewModel>>(banners);
+
+            var showBannerViewModelPaged = 
+                new StaticPagedList<ShowBannerViewModel>(showBannerViewModel, pagination.Page, 
+                pagination.Count, bannersCount);
+
+            return showBannerViewModelPaged;
         }
 
         public async Task<List<ShowBannerViewModel>> AllAsync()

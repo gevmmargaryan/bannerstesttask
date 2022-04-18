@@ -13,6 +13,7 @@ using Banners.Service.Services.Implementations;
 using Banners.Service.Services.Interfaces;
 using Banners.Infrastructure.Structures;
 using Microsoft.AspNetCore.Authorization;
+using PagedList;
 
 namespace Banners.Areas.Admin.Controllers
 {
@@ -31,9 +32,10 @@ namespace Banners.Areas.Admin.Controllers
 
 
         // GET: Admin/Banners
-        public async Task<IActionResult> Index(Pagination pagination)
+        public async Task<IActionResult> Index([FromQuery]Pagination pagination)
         {
             var banners = await _bannerService.GetPaginatedAsync(pagination);
+
             return View(banners);
         }
 
