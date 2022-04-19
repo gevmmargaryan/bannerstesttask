@@ -9,6 +9,8 @@ using Banners.Models.ViewModels;
 using Microsoft.AspNetCore.Http;
 using Microsoft.EntityFrameworkCore;
 using X.PagedList;
+using Banners.Shared.WebSockets;
+using System.Text.Json;
 
 namespace Banners.Service.Services.Implementations
 {
@@ -31,7 +33,10 @@ namespace Banners.Service.Services.Implementations
             banner.ImageURL = UploadedFile(bannerViewModel.FormFile, webrootFolder);
 
             banner = await _bannerRepository.InsertAsync(banner);
-
+            if (banner.Online)
+            {
+                await SendMessage(WebSocketAction.AddBanner, banner);
+            }
             return _mapper.Map<ShowBannerViewModel>(banner);
         }
 
@@ -50,6 +55,11 @@ namespace Banners.Service.Services.Implementations
             }
 
             banner = await _bannerRepository.UpdateAsync(banner);
+
+            if (!banner.Online)
+            {
+                await SendMessage(WebSocketAction.DeleteBanner, banner);
+            }
 
             return _mapper.Map<ShowBannerViewModel>(banner);
         }
@@ -114,7 +124,8 @@ namespace Banners.Service.Services.Implementations
 
         public async Task<BannerViewModel> DeleteAsync(int id)
         {
-            var banner = await _bannerRepository.DeleteAsync(id);           
+            var banner = await _bannerRepository.DeleteAsync(id);
+            await SendMessage(WebSocketAction.DeleteBanner, banner);
 
             return _mapper.Map<UpdateBannerViewModel>(banner);
         }
@@ -122,6 +133,16 @@ namespace Banners.Service.Services.Implementations
         public Task<BannerViewModel> AddAsync(BannerViewModel entity)
         {
             throw new NotImplementedException();
+        }
+
+        private async Task SendMessage(string webSocketAction, Banner model)
+        {
+            //this code should be in event listener like observer
+            var webSocketMessage = new WebSocketMessage<Banner>();
+            webSocketMessage.Action = webSocketAction;
+            webSocketMessage.Model = model;
+            string jsonString = JsonSerializer.Serialize(webSocketMessage);
+            await BannerSocket.SendToAllAsync(jsonString);
         }
     }
 }

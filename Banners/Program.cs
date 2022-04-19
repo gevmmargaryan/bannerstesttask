@@ -4,6 +4,7 @@ using Banners.DAL.Entities;
 using Banners.DAL.Repositories;
 using Banners.DAL.Repositories.Implementations;
 using Banners.DAL.Repositories.Interfaces;
+using Banners.Middlewares;
 using Banners.Service.Services;
 using Banners.Service.Services.Implementations;
 using Banners.Service.Services.Interfaces;
@@ -88,6 +89,9 @@ app.UseStaticFiles();
 app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
+
+app.UseWebSockets();
+app.UseMiddleware<WebSocketMiddleware>();
 
 app.MapControllerRoute(
     name: "Admin",

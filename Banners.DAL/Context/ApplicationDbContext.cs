@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using Banners.DAL.Entities;
 using Bogus;
+using EntityFrameworkCore.Triggers;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
@@ -13,7 +14,10 @@ namespace Banners.DAL.Context
     {
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options)
         {
-
+            Triggers<Banner>.Inserting += entry =>
+            {
+                Console.WriteLine($"Person: {entry.Entity}");
+            };
         }
 
         public DbSet<Banner> Banner { get; set; }

@@ -46,6 +46,17 @@
           }
         }
       },
+      "EntityFrameworkCore.Triggers/1.2.3": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore": "6.0.4"
+        },
+        "runtime": {
+          "lib/netstandard2.1/EntityFrameworkCore.Triggers.dll": {
+            "assemblyVersion": "1.2.3.0",
+            "fileVersion": "1.2.3.0"
+          }
+        }
+      },
       "JetBrains.Annotations/2021.1.0": {
         "runtime": {
           "lib/netstandard2.0/JetBrains.Annotations.dll": {
@@ -591,6 +602,7 @@
           "BCrypt.Net-Next": "4.0.3",
           "Banners.Infrastructure": "1.0.0",
           "Bogus": "34.0.2",
+          "EntityFrameworkCore.Triggers": "1.2.3",
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "6.0.4",
           "Microsoft.EntityFrameworkCore": "6.0.4",
           "Microsoft.EntityFrameworkCore.SqlServer": "6.0.3",
@@ -658,6 +670,13 @@
       "sha512": "sha512-2KQAuMn3fLAQ2r6jeiffZnpv0bi3GCW3iRB2v1KeHIEBu8MNTh9dBlLTZwGvM0pr+9doKkU8L5JgCURmTmT88A==",
       "path": "bogus/34.0.2",
       "hashPath": "bogus.34.0.2.nupkg.sha512"
+    },
+    "EntityFrameworkCore.Triggers/1.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-mnO/imDMIM6tIYrdIqbOqzj8KFYdY3n/kBOSQAT4OXvhTMDbO6nAf5yHn8W8PeM3JOmyKednA7S7/6p+XG4+3A==",
+      "path": "entityframeworkcore.triggers/1.2.3",
+      "hashPath": "entityframeworkcore.triggers.1.2.3.nupkg.sha512"
     },
     "JetBrains.Annotations/2021.1.0": {
       "type": "package",

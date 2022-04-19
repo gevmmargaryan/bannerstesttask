@@ -1,12 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "6v1f8fKBl9NW1LSv1dYQiONmR+ZEnQza4WG2T91tLydxffYMdYxmRpdqjQhZiImXSYGTX7cuz90sIB0O6MZ6oA==",
+  "dgSpecHash": "ZfApIjwOYmHpo1C2dGt3h9MLDfFja8iS9sTGycyL5k7wxB07KlL/dRmsL86fN/+trw//JUclgcgnS1VEhKaYjg==",
   "success": true,
   "projectFilePath": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners.Service\\Banners.Service.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\zevs\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\entityframeworkcore.triggers\\1.2.3\\entityframeworkcore.triggers.1.2.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.cryptography.internal\\6.0.4\\microsoft.aspnetcore.cryptography.internal.6.0.4.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\microsoft.aspnetcore.cryptography.keyderivation\\6.0.4\\microsoft.aspnetcore.cryptography.keyderivation.6.0.4.nupkg.sha512",

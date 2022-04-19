@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Jg2H0SiZeVdMjbVvAwFy8bLgKWYFNIQvf2bZhGaBnBA=",
+  "Hash": "pVoUqiOXTsYxMAOjjM5hQPo92R06MrvYEIxFpBnMWls=",
   "Source": "Banners",
   "BasePath": "_content/Banners",
   "Mode": "Default",
@@ -49096,6 +49096,23 @@
       "OriginalItemSpec": "wwwroot\\uploads\\images\\08d0774f-0723-4002-bced-f0b3d4032721_14-126-208-V01.jpg"
     },
     {
+      "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\12a5e7bc-28bf-4faa-b918-92bed224b195_pasback.jpg",
+      "SourceId": "Banners",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\",
+      "BasePath": "_content/Banners",
+      "RelativePath": "uploads/images/12a5e7bc-28bf-4faa-b918-92bed224b195_pasback.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\12a5e7bc-28bf-4faa-b918-92bed224b195_pasback.jpg"
+    },
+    {
       "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\1ce5a1ef-6139-426a-9c83-ce002577192c_54970355.webp",
       "SourceId": "Banners",
       "SourceType": "Discovered",
@@ -49162,6 +49179,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\uploads\\images\\77561a8f-05fa-4870-b7be-2e23a7acbf17_14-126-208-V01.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\95bc2fbb-e526-40e9-aab4-2e507071d96f_avataaars.png",
+      "SourceId": "Banners",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\",
+      "BasePath": "_content/Banners",
+      "RelativePath": "uploads/images/95bc2fbb-e526-40e9-aab4-2e507071d96f_avataaars.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\95bc2fbb-e526-40e9-aab4-2e507071d96f_avataaars.png"
+    },
+    {
+      "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\9b5dd071-bdaf-46b5-8bb1-527201756a35_avataaars.png",
+      "SourceId": "Banners",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\",
+      "BasePath": "_content/Banners",
+      "RelativePath": "uploads/images/9b5dd071-bdaf-46b5-8bb1-527201756a35_avataaars.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\uploads\\images\\9b5dd071-bdaf-46b5-8bb1-527201756a35_avataaars.png"
     },
     {
       "Identity": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\wwwroot\\uploads\\images\\a9887115-9d43-4b40-96fa-1b562ace19f4_08G-P4-5170-RX_LG_1.png",

@@ -79,3 +79,4 @@ C:\Users\zevs\source\repos\Banners\Banners.API\obj\Debug\net6.0\Banners.API.MvcA
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\JetBrains.Annotations.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\X.PagedList.dll
 C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\X.PagedList.Mvc.Core.dll
+C:\Users\zevs\source\repos\Banners\Banners.API\bin\Debug\net6.0\EntityFrameworkCore.Triggers.dll

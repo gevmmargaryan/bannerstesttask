@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "dUEUIs3aVYcIMPDVq8y0l4jgkdQ3KcWN8y0GRlVRUbXSV8HB2IXXv5fu1Zzzp9rhrjX1Ie3AEapizJknA4pqFw==",
+  "dgSpecHash": "sQGwXt4rqdfhellGsrzL0YOoXsVaBo0hazBmok8vRWNcNDGdXBqSKMgHq6Q+RESTqev1E6wcxqF+ziPGx5IRpQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\zevs\\source\\repos\\Banners\\Banners\\Banners.csproj",
   "expectedPackageFiles": [
@@ -8,6 +8,7 @@
     "C:\\Users\\zevs\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\cloudscribe.pagination.models\\1.1.0\\cloudscribe.pagination.models.1.1.0.nupkg.sha512",
+    "C:\\Users\\zevs\\.nuget\\packages\\entityframeworkcore.triggers\\1.2.3\\entityframeworkcore.triggers.1.2.3.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\jetbrains.annotations\\2021.1.0\\jetbrains.annotations.2021.1.0.nupkg.sha512",
     "C:\\Users\\zevs\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

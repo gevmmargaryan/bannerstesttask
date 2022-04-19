@@ -56,6 +56,10 @@
               "target": "Package",
               "version": "[34.0.2, )"
             },
+            "EntityFrameworkCore.Triggers": {
+              "target": "Package",
+              "version": "[1.2.3, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[6.0.4, )"
